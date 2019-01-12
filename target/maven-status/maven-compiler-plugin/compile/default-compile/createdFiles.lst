@@ -1,0 +1,4 @@
+com/isdemir/otomasyon/WebConfiguration/WebAppConfig.class
+com/isdemir/otomasyon/WebController/WebAppController.class
+com/isdemir/otomasyon/OtomasyonApplication.class
+com/isdemir/otomasyon/WebController/WebAppRestController.class
