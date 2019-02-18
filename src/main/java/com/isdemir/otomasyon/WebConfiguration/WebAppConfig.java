@@ -62,21 +62,6 @@ public class WebAppConfig extends WebSecurityConfigurerAdapter {
                         .sessionManagement()
                         .sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED)
                         .maximumSessions(2);
-        /*http.authorizeRequests().antMatchers("/").permitAll()
-                .antMatchers("/welcome").hasAnyRole("USER","ADMIN").antMatchers("/getDatas").hasAnyRole("USER","ADMIN")
-                .antMatchers("/addData").hasAnyRole("ADMIN").anyRequest().authenticated()
-                .antMatchers("/login*").permitAll()
-                .and()
-                .formLogin()
-                .loginPage("/login.jsp")
-                .usernameParameter("username")
-                .passwordParameter("password")
-                .defaultSuccessUrl("/home.html")
-                .permitAll()
-                .and()
-                .logout()
-                .permitAll();
-        http.csrf().disable();*/
         http.csrf().disable();
     }
 

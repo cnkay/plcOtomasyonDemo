@@ -21,20 +21,12 @@ import java.security.Principal;
 
 @Controller
 public class WebAppController {
-    /*@RequestMapping(value = "/")
-    public String root(){
-        return "index";
-    }*/
     @RequestMapping(value = "/user")
     public String userIndex(Principal principal){
         System.out.println(principal.getName());
        /* System.out.println(org.hibernate.Version.getVersionString());*/
         return "user/index";
     }
-    /*@RequestMapping(value = "/login", method = {RequestMethod.GET,RequestMethod.POST})
-    public String loginPage() {
-        return "login";
-    }*/
     @RequestMapping(value={"/", "/login"}, method = RequestMethod.GET)
     public ModelAndView login(@RequestParam(value = "error", required = false) String error){
         ModelAndView modelAndView = new ModelAndView();
